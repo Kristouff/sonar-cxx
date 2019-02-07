@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonarsource.sonarqube-plugins.cxx</groupId>
+    <artifactId>cxx</artifactId>
+    <version>1.2.2-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>sonar-cxx-cfamily-plugin</artifactId>
+  <packaging>sonar-plugin</packaging>
+
+  <name>Cxx :: Sonar extension Plugin for CFamily language</name>
+  <inceptionYear>2010</inceptionYear>
+  <description>Extends analysis and reporting on c++ projects.</description>
+  <url>https://github.com/SonarOpenCommunity/sonar-cxx/wiki</url>
+
+  <properties>
+    <sonar.artifact.path>target/${project.artifactId}-${project.version}.jar</sonar.artifact.path>
+    <sonar.pluginClass>org.sonar.plugins.cxx.cfamily.CxxCFamilyPlugin</sonar.pluginClass>
+    <sonar.pluginName>CFamily Extension</sonar.pluginName>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.sonarsource.sonarqube</groupId>
+      <artifactId>sonar-plugin-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cxx-squid</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cxx-checks</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cxx-sensors</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.sonarsource.sslr</groupId>
+      <artifactId>sslr-xpath</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+    </resources>
+  </build>
+
+</project>
